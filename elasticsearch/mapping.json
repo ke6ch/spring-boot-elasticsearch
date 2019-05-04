@@ -1,0 +1,18 @@
+{
+  "settings": {
+    "number_of_shards": 3,
+    "number_of_replicas": 1
+  },
+  "mappings": {
+    "dynamic": false,
+    "properties": {
+      "year": { "type": "date" },
+      "pefectures_code": { "teyp": "integer" },
+      "pefectures_name": { "type": "keyword" },
+      "total_population": { "type": "integer" },
+      "younger_population": { "type": "integer" },
+      "production_population": { "type": "integer" },
+      "elderly_population": { "type": "integer" }
+    }
+  }
+}
