@@ -9,25 +9,24 @@ import lombok.Data;
 
 @Data
 public class Population {
-	@JsonFormat(pattern = "yyyy/MM/dd")
-	private Date year;
-	
-	@JsonProperty("pefectures_code")
-	private int pefecturesCode;
+  @JsonFormat(pattern = "yyyy/MM/dd")
+  private Date year;
 
-	@JsonProperty("pefectures_name")
-	private String pefecturesName;
+  @JsonProperty("pefectures_code")
+  private int pefecturesCode;
 
-	@JsonProperty("total_population")
-	private int totalPopulation;
+  @JsonProperty("pefectures_name")
+  private String pefecturesName;
 
-	@JsonProperty("younger_population")
-	private int youngerPopulation;
+  @JsonProperty("total_population")
+  private int totalPopulation;
 
-	@JsonProperty("production_population")
-	private int productionPopulation;
+  @JsonProperty("younger_population")
+  private int youngerPopulation;
 
-	@JsonProperty("elderly_population")
-	private int elderlyPopulation;
-		
+  @JsonProperty("production_population")
+  private int productionPopulation;
+
+  @JsonProperty("elderly_population")
+  private int elderlyPopulation;
 }

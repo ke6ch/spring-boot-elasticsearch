@@ -9,28 +9,27 @@ import org.springframework.context.annotation.Configuration;
 
 @Configuration
 public class ElasticsearchConfig {
-	
-	@Value("${elasticsearch.host}")
-	private String host;
-	
-    @Value("${elasticsearch.port01}") 
-    private int port01;
 
-    @Value("${elasticsearch.port02}") 
-    private int port02;
+  @Value("${elasticsearch.host}")
+  private String host;
 
-    @Value("${elasticsearch.port03}") 
-    private int port03;
+  @Value("${elasticsearch.port01}")
+  private int port01;
 
-    
-	@Bean
-	public RestHighLevelClient client() {
-		RestHighLevelClient client = new RestHighLevelClient(
-				RestClient.builder(
-						new HttpHost(host, port01),
-						new HttpHost(host, port02),
-						new HttpHost(host, port03)));
-        return client;
-	}
-	
+  @Value("${elasticsearch.port02}")
+  private int port02;
+
+  @Value("${elasticsearch.port03}")
+  private int port03;
+
+  @Bean
+  public RestHighLevelClient client() {
+    RestHighLevelClient client =
+        new RestHighLevelClient(
+            RestClient.builder(
+                new HttpHost(host, port01),
+                new HttpHost(host, port02),
+                new HttpHost(host, port03)));
+    return client;
+  }
 }
