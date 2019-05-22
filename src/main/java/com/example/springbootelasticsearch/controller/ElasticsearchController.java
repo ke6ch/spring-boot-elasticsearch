@@ -14,19 +14,17 @@ import com.example.springbootelasticsearch.service.ElasticsearchService;
 @Controller
 public class ElasticsearchController {
 
-    @Autowired
-    ElasticsearchService elasticsearchService;
+  @Autowired ElasticsearchService elasticsearchService;
 
-    @RequestMapping("/")
-    @ResponseBody
-    public List<Test> users() {
-    	return elasticsearchService.search();
-    }
+  @RequestMapping("/")
+  @ResponseBody
+  public List<Test> users() {
+    return elasticsearchService.search();
+  }
 
-    @RequestMapping("/population")
-    @ResponseBody
-    public List<Population> population() {
-    	return elasticsearchService.population();
-    }
-    
+  @RequestMapping("/population")
+  @ResponseBody
+  public List<Population> population() {
+    return elasticsearchService.population();
+  }
 }
