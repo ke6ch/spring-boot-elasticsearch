@@ -16,6 +16,7 @@ HELP.md
 *.iws
 *.iml
 *.ipr
+*.eml
 
 ### NetBeans ###
 /nbproject/private/
@@ -28,6 +29,5 @@ HELP.md
 ### VS Code ###
 .vscode/
 
-### elasticsearch data ###
-/elasticsearch/population.json
-/elasticsearch/index.js
+### elasticsearch ###
+/elasticsearch/
